@@ -3,7 +3,6 @@ import {
   Flex,
   HStack,
   IconButton,
-  Button,
   Menu,
   MenuButton,
   MenuList,
@@ -18,6 +17,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -52,7 +52,7 @@ export default function Simple() {
   return (
     <>
       <Box
-        bg={"#3182CE"}
+        bg={"#3182cee3"}
         px={4}
         color={"white"}
         position={"fixed"}
@@ -102,7 +102,9 @@ export default function Simple() {
                   Muestra
                 </MenuItem>
                 <MenuDivider />
-                <MenuItem>Alumnos Participantes</MenuItem>
+                <MenuItem>
+                  <Link to={'/estudiantes'}>Alumnos Participantes</Link>
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
