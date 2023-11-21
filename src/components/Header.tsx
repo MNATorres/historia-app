@@ -45,7 +45,7 @@ const NavLink = (props: Props) => {
   );
 };
 
-export default function Simple() {
+export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { scrollToSection } = useNavigation();
 

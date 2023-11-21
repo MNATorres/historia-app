@@ -8,10 +8,11 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { FaHeart } from "react-icons/fa";
-import Logo from "./../assets/logo.png";
-import { useNavigation } from "../hooks/useNavigation";
+import Logo from "./../../assets/logo.png";
+import { useNavigation } from "./../../hooks/useNavigation";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function FooterStudents() {
   const { scrollToSection } = useNavigation();
 
   return (
@@ -32,14 +33,8 @@ export default function Footer() {
           </Flex>
         </Flex>
         <Stack direction={"row"} spacing={6}>
-          <Box as="a" onClick={() => scrollToSection('inicio')}>
-            Inicio
-          </Box>
-          <Box as="a" onClick={() => scrollToSection('Mayas')}>
-            Culturas
-          </Box>
-          <Box as="a" onClick={() => scrollToSection('Alumnos')}>
-            Alumnos
+          <Box as="a" onClick={() => scrollToSection("inicio")}>
+            <Link to={"/"}>Inicio</Link>
           </Box>
         </Stack>
       </Container>
@@ -53,12 +48,12 @@ export default function Footer() {
           as={Stack}
           maxW={"6xl"}
           py={4}
-          direction={{ base: "column"}}
+          direction={{ base: "column" }}
           spacing={4}
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Flex direction={"column"} alignItems={"center"}>
+          <Flex direction={"column"} alignItems={"center"} >
             <Flex alignItems={"center"}>
               <FaHeart style={{ color: "red", marginRight: "5px" }} />
               <Text>Gracias por llegar hasta el final</Text>
