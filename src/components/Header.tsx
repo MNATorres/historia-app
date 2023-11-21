@@ -17,7 +17,6 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
-import { Link } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -63,9 +62,7 @@ export default function Header() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Link to={"/"}>
-                <Image w={50} src={Logo} alt="HIstoria" />
-              </Link>
+              <Image w={50} src={Logo} alt="HIstoria" />
             </Box>
           </HStack>
           <Flex direction={"column"} alignItems={"center"}>
@@ -115,9 +112,7 @@ export default function Header() {
                   Literatura Precolombina
                 </MenuItem>
                 <MenuDivider />
-                <Link to={"/estudiantes"}>
-                  <MenuItem>Alumnos Participantes</MenuItem>
-                </Link>
+                <MenuItem>Alumnos Participantes</MenuItem>
               </MenuList>
             </Menu>
           </Flex>

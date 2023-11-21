@@ -28,7 +28,7 @@ export default function TalaYRoza() {
           En sus campos, llamados milpas, cultivaron principalmente maíz,
           calabaza, ají, cacao, tomate, pimienta, porotos y orégano.
         </Text>
-        <Image src={roza} alt="roza" />
+        <Image w={{ base: "100%", md: "100%", lg: 600, xl: 600 }} src={roza} alt="roza" />
       </Box>
     </Flex>
   );

@@ -35,7 +35,7 @@ export default function PiramideDeKukulcan() {
           efecto simboliza el descenso del dios Kukulcán a la tierra, para
           comenzar así el ciclo agrícola.
         </Text>
-        <Image src={kukulcan} alt="roza" />
+        <Image w={{ base: "100%", md: "100%", lg: 600, xl: 600 }} src={kukulcan} alt="roza" />
       </Box>
     </Flex>
   );

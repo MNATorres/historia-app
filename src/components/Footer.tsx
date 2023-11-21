@@ -10,7 +10,6 @@ import {
 import { FaHeart } from "react-icons/fa";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { scrollToSection } = useNavigation();
@@ -29,7 +28,7 @@ export default function Footer() {
           <Image mx={2} src={Logo} w={70} alt="Colegio Nuevo Horizonte" />
           <Flex as="b" fontSize={"20px"} direction={"column"} align={"center"}>
             <Text>Colegio Nuevo</Text>
-            <Text>Horizonte</Text>
+            <Text>Horizonte N°1</Text>
           </Flex>
         </Flex>
         <Stack direction={"row"} spacing={6}>
@@ -39,9 +38,7 @@ export default function Footer() {
           <Box as="a" onClick={() => scrollToSection("Chinampas")}>
             Culturas
           </Box>
-          <Box>
-            <Link to={"/estudiantes"}>Alumnos</Link>
-          </Box>
+          <Box>Alumnos</Box>
         </Stack>
       </Container>
 

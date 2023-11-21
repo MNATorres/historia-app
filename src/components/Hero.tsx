@@ -12,7 +12,7 @@ import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import Slider from "react-slick";
 import Azteca from "./../assets/fondoazteca.jpg";
 import Maya from "./../assets/fondoMaya.jpg";
-import Inca from "./../assets/fondoinca.png";
+import Inca from "./../assets/fondoInca.jpg";
 
 const settings = {
   dots: true,
@@ -34,19 +34,19 @@ export default function Hero() {
 
   const cards = [
     {
-      title: "Cultura Maya",
-      text: "La cultura Maya llegó a tener diferentes formas de intercambio económico: monedas de oro platas, cacao e incluso maíz. De ahí viene este refrán, que lo que quiere decir es que hay que darle el valor justo a las cosas, para aprender a apreciarlas en su justa medida.",
+      title: "Cultura",
+      text: "MAYA",
       image: Maya,
     },
     {
-      title: "Cultura Azteca",
-      text: "Los Aztecas fueron un pueblo que por medio de alianzas militares con otros grupos y poblaciones se expandieron rápidamente y dominaron el área central y sur del actual México entre los siglos XIV y XVI.",
+      title: "Cultura",
+      text: "AZTECA",
       image: Azteca,
     },
 
     {
-      title: "Cultura Inca",
-      text: "Los Incas fueron los descendientes más tardíos de una de las cunas de la humanidad, ubicada en Norte Chico, entre Chile y Perú. Junto a la mesoamericana, esta fue la expresión originaria humana más importante de América.",
+      title: "Cultura",
+      text: "INCA",
       image: Inca,
     },
   ];
@@ -108,7 +108,6 @@ export default function Hero() {
           >
             <Container size="container.lg" height="600px" position="relative">
               <Stack
-                spacing={6}
                 w={"full"}
                 pr={8}
                 maxW={"lg"}
@@ -123,11 +122,10 @@ export default function Hero() {
                   {card.title}
                 </Heading>
                 <Text
-                  bg={"#00000070"}
-                  p={1}
                   borderRadius={3}
-                  fontSize={{ base: "md", lg: "lg" }}
-                  color="white"
+                  fontSize={{ base: "80px", lg: "70px" }}
+                  fontWeight={"bold"}
+                  color={"#3182CE"}
                 >
                   {card.text}
                 </Text>
