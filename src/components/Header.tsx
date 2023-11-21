@@ -91,17 +91,28 @@ export default function Header() {
                 />
               </MenuButton>
               <MenuList color={"black"}>
-                <MenuItem onClick={() => scrollToSection("Mayas")}>
-                  Mayas
+                <MenuItem onClick={() => scrollToSection("Chinampas")}>
+                  Chinampas
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Aztecas")}>
-                  Aztecas
+                <MenuItem onClick={() => scrollToSection("TerrazaDelCultivo")}>
+                  Terraza Del Cultivo
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Incas")}>
-                  Incas
+                <MenuItem onClick={() => scrollToSection("TalaYRoza")}>
+                  Tala Y Roza
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Muestra")}>
-                  Muestra
+                <MenuItem onClick={() => scrollToSection("PiramideDeKukulcan")}>
+                  Pirámide De Kukulcán
+                </MenuItem>
+                <MenuItem onClick={() => scrollToSection("Tikal")}>
+                  Tikal
+                </MenuItem>
+                <MenuItem onClick={() => scrollToSection("TemploMayor")}>
+                  El Templo Mayor
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection("LiteraturaPrecolombina")}
+                >
+                  Literatura Precolombina
                 </MenuItem>
                 <MenuDivider />
                 <Link to={"/estudiantes"}>
