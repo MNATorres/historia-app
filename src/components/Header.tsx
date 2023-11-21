@@ -3,7 +3,6 @@ import {
   Flex,
   HStack,
   IconButton,
-  Button,
   Menu,
   MenuButton,
   MenuList,
@@ -18,6 +17,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -45,14 +45,14 @@ const NavLink = (props: Props) => {
   );
 };
 
-export default function Simple() {
+export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { scrollToSection } = useNavigation();
 
   return (
     <>
       <Box
-        bg={"#3182CE"}
+        bg={"#3182cee3"}
         px={4}
         color={"white"}
         position={"fixed"}
@@ -63,7 +63,9 @@ export default function Simple() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Image w={50} src={Logo} alt="HIstoria" />
+              <Link to={"/"}>
+                <Image w={50} src={Logo} alt="HIstoria" />
+              </Link>
             </Box>
           </HStack>
           <Flex direction={"column"} alignItems={"center"}>
@@ -89,20 +91,33 @@ export default function Simple() {
                 />
               </MenuButton>
               <MenuList color={"black"}>
-                <MenuItem onClick={() => scrollToSection("Mayas")}>
-                  Mayas
+                <MenuItem onClick={() => scrollToSection("Chinampas")}>
+                  Chinampas
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Aztecas")}>
-                  Aztecas
+                <MenuItem onClick={() => scrollToSection("TerrazaDelCultivo")}>
+                  Terraza Del Cultivo
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Incas")}>
-                  Incas
+                <MenuItem onClick={() => scrollToSection("TalaYRoza")}>
+                  Tala Y Roza
                 </MenuItem>
-                <MenuItem onClick={() => scrollToSection("Muestra")}>
-                  Muestra
+                <MenuItem onClick={() => scrollToSection("PiramideDeKukulcan")}>
+                  Pirámide De Kukulcán
+                </MenuItem>
+                <MenuItem onClick={() => scrollToSection("Tikal")}>
+                  Tikal
+                </MenuItem>
+                <MenuItem onClick={() => scrollToSection("TemploMayor")}>
+                  El Templo Mayor
+                </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection("LiteraturaPrecolombina")}
+                >
+                  Literatura Precolombina
                 </MenuItem>
                 <MenuDivider />
-                <MenuItem>Alumnos Participantes</MenuItem>
+                <Link to={"/estudiantes"}>
+                  <MenuItem>Alumnos Participantes</MenuItem>
+                </Link>
               </MenuList>
             </Menu>
           </Flex>
