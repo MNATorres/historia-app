@@ -1,8 +1,5 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import {
-  ListItem,
-  OrderedList,
-} from "@chakra-ui/react";
+import { ListItem, OrderedList } from "@chakra-ui/react";
 import chinampa from "./../../assets/chinampa.jpg";
 
 export default function Chinampas() {
@@ -35,7 +32,11 @@ export default function Chinampas() {
             este modo sembraban varias veces al año.
           </ListItem>
         </OrderedList>
-        <Image src={chinampa} alt="Chinampa" />
+        <Image
+          w={{ base: "100%", md: "100%", lg: 600, xl: 600 }}
+          src={chinampa}
+          alt="Chinampa"
+        />
       </Box>
     </Flex>
   );

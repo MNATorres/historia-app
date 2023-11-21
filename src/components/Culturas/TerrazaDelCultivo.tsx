@@ -33,7 +33,7 @@ export default function TerrazaDelCultivo() {
           variedad de alimentos, desde maíz hasta patatas, que alimentaron a un
           imperio floreciente.
         </Text>
-        <Image src={cultivoInca} alt="TerrazaDelCultivo" />
+        <Image w={{ base: "100%", md: "100%", lg: 600, xl: 600 }} src={cultivoInca} alt="TerrazaDelCultivo" />
       </Box>
     </Flex>
   );

@@ -35,7 +35,7 @@ export default function LiteraturaPrecolombina() {
           expresiones culturales de diferentes pueblos.
         </Text>
 
-        <Image src={literatura} alt="TerrazaDelCultivo" />
+        <Image w={{ base: "100%", md: "100%", lg: 600, xl: 600 }} src={literatura} alt="TerrazaDelCultivo" />
         <Text as="b" fontStyle={"italic"}>
           Finalidad de la literatura precolombina
         </Text>

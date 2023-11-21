@@ -32,7 +32,11 @@ export default function Tikal() {
           C.
         </Text>
 
-        <Image src={tikal} alt="TerrazaDelCultivo" />
+        <Image
+          w={{ base: "100%", md: "100%", lg: 600, xl: 600 }}
+          src={tikal}
+          alt="TerrazaDelCultivo"
+        />
       </Box>
     </Flex>
   );

@@ -8,7 +8,9 @@ export default function Teachers() {
       <Flex w={"full"} maxW={"7xl"} p={3}>
         <List spacing={3}>
           <ListItem>
-              <Text as='b' fontStyle={'italic'} mr={2}>Profesores a Cargo</Text>
+            <Text as="b" fontStyle={"italic"} mr={2}>
+              Profesores a Cargo
+            </Text>
           </ListItem>
           <ListItem>
             <Flex align={"center"}>
