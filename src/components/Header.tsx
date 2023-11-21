@@ -63,7 +63,9 @@ export default function Header() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Image w={50} src={Logo} alt="HIstoria" />
+              <Link to={"/"}>
+                <Image w={50} src={Logo} alt="HIstoria" />
+              </Link>
             </Box>
           </HStack>
           <Flex direction={"column"} alignItems={"center"}>
@@ -102,9 +104,9 @@ export default function Header() {
                   Muestra
                 </MenuItem>
                 <MenuDivider />
-                <MenuItem>
-                  <Link to={'/estudiantes'}>Alumnos Participantes</Link>
-                </MenuItem>
+                <Link to={"/estudiantes"}>
+                  <MenuItem>Alumnos Participantes</MenuItem>
+                </Link>
               </MenuList>
             </Menu>
           </Flex>

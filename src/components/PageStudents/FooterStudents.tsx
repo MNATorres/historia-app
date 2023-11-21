@@ -9,11 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { FaHeart } from "react-icons/fa";
 import Logo from "./../../assets/logo.png";
-import { useNavigation } from "./../../hooks/useNavigation";
 import { Link } from "react-router-dom";
 
 export default function FooterStudents() {
-  const { scrollToSection } = useNavigation();
 
   return (
     <Box bg={"#3182CE"} color={"white"}>
@@ -33,7 +31,7 @@ export default function FooterStudents() {
           </Flex>
         </Flex>
         <Stack direction={"row"} spacing={6}>
-          <Box as="a" onClick={() => scrollToSection("inicio")}>
+          <Box>
             <Link to={"/"}>Inicio</Link>
           </Box>
         </Stack>
@@ -53,7 +51,7 @@ export default function FooterStudents() {
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}
         >
-          <Flex direction={"column"} alignItems={"center"} >
+          <Flex direction={"column"} alignItems={"center"}>
             <Flex alignItems={"center"}>
               <FaHeart style={{ color: "red", marginRight: "5px" }} />
               <Text>Gracias por llegar hasta el final</Text>

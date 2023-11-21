@@ -10,6 +10,7 @@ import {
 import { FaHeart } from "react-icons/fa";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const { scrollToSection } = useNavigation();
@@ -32,14 +33,14 @@ export default function Footer() {
           </Flex>
         </Flex>
         <Stack direction={"row"} spacing={6}>
-          <Box as="a" onClick={() => scrollToSection('inicio')}>
+          <Box as="a" onClick={() => scrollToSection("inicio")}>
             Inicio
           </Box>
-          <Box as="a" onClick={() => scrollToSection('Mayas')}>
+          <Box as="a" onClick={() => scrollToSection("Mayas")}>
             Culturas
           </Box>
-          <Box as="a" onClick={() => scrollToSection('Alumnos')}>
-            Alumnos
+          <Box>
+            <Link to={"/estudiantes"}>Alumnos</Link>
           </Box>
         </Stack>
       </Container>
@@ -53,7 +54,7 @@ export default function Footer() {
           as={Stack}
           maxW={"6xl"}
           py={4}
-          direction={{ base: "column"}}
+          direction={{ base: "column" }}
           spacing={4}
           justify={{ base: "center", md: "space-between" }}
           align={{ base: "center", md: "center" }}

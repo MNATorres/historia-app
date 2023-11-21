@@ -9,6 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Logo from "./../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: React.ReactNode;
@@ -53,7 +54,9 @@ export default function HeaderStudents() {
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Image w={50} src={Logo} alt="HIstoria" />
+              <Link to={"/"}>
+                <Image w={50} src={Logo} alt="HIstoria" />
+              </Link>
             </Box>
           </HStack>
           <Flex direction={"column"} alignItems={"center"}>
