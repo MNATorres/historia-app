@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Teachers from "./components/Teachers";
 import Students from "./components/Students";
 import Title from "./components/Title";
+import PlayGame from "./components/playGame/PlayGame";
 
 function App() {
   return (
@@ -15,9 +16,9 @@ function App() {
         <Header />
         <Hero />
         <Title />
-
         <Main />
         <Students />
+        <PlayGame />
         <Teachers />
         <Footer />
       </NavigationProvider>
