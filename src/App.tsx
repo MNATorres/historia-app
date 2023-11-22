@@ -5,7 +5,8 @@ import Main from "./components/Main";
 import { NavigationProvider } from "./hooks/useNavigation";
 import Footer from "./components/Footer";
 import Teachers from "./components/Teachers";
-import StudentsUrl from "./components/StudentsUrl";
+import Students from "./components/Students";
+import ListStudents from "./components/ListStudents";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Header />
         <Hero />
         <Main />
-        <StudentsUrl />
+        <Students />
         <Teachers />
         <Footer />
       </NavigationProvider>

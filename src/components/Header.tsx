@@ -17,6 +17,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
+import ListStudents from "./ListStudents";
 
 interface Props {
   children: React.ReactNode;
@@ -112,7 +113,9 @@ export default function Header() {
                   Literatura Precolombina
                 </MenuItem>
                 <MenuDivider />
-                <MenuItem>Alumnos Participantes</MenuItem>
+                <MenuItem>
+                  <ListStudents />
+                </MenuItem>
               </MenuList>
             </Menu>
           </Flex>
