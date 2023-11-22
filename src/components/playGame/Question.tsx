@@ -17,6 +17,7 @@ export default function Question({
   const [respuestaCorrecta, setRespuestaCorrecta] = useState<boolean | null>(
     null
   );
+  const [respondido, setRespondido] = useState(false);
 
   const handleRespuesta = (esVerdadero: boolean) => {
     if (respuestaCorrecta === null) {
@@ -49,30 +50,36 @@ export default function Question({
     >
       <Text>{question}</Text>
       <Flex w={"full"} justify={"space-around"}>
-        <Button
-          w={"40%"}
-          onClick={() => {
-            handleRespuesta(buttonTrue);
-            if (buttonTrue === true) {
-              handleRespuestaCorrecta();
-            }
-          }}
-          disabled={respuestaCorrecta !== null}
-        >
-          Verdadero
-        </Button>
-        <Button
-          w={"40%"}
-          onClick={() => {
-            handleRespuesta(buttonFalse);
-            if (buttonFalse === true) {
-              handleRespuestaCorrecta();
-            }
-          }}
-          disabled={respuestaCorrecta !== null}
-        >
-          Falso
-        </Button>
+        {!respondido && (
+          <>
+            <Button
+              w={"40%"}
+              onClick={() => {
+                handleRespuesta(buttonTrue);
+                if (buttonTrue === true) {
+                  handleRespuestaCorrecta();
+                }
+                setRespondido(true);
+              }}
+              disabled={respuestaCorrecta !== null}
+            >
+              Verdadero
+            </Button>
+            <Button
+              w={"40%"}
+              onClick={() => {
+                handleRespuesta(buttonFalse);
+                if (buttonFalse === true) {
+                  handleRespuestaCorrecta();
+                }
+                setRespondido(true);
+              }}
+              disabled={respuestaCorrecta !== null}
+            >
+              Falso
+            </Button>
+          </>
+        )}
       </Flex>
     </Flex>
   );
