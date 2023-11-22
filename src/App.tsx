@@ -6,7 +6,6 @@ import { NavigationProvider } from "./hooks/useNavigation";
 import Footer from "./components/Footer";
 import Teachers from "./components/Teachers";
 import Students from "./components/Students";
-import ListStudents from "./components/ListStudents";
 
 function App() {
   return (
