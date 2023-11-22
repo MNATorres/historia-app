@@ -3,9 +3,17 @@ import { Button, Flex, Text } from "@chakra-ui/react";
 
 interface IQuestionProps {
   question: string;
+  buttonTrue: boolean;
+  buttonFalse: boolean;
+  handleRespuestaCorrecta: () => void;
 }
 
-export default function Question({ question }: IQuestionProps) {
+export default function Question({
+  question,
+  buttonTrue,
+  buttonFalse,
+  handleRespuestaCorrecta,
+}: IQuestionProps) {
   const [respuestaCorrecta, setRespuestaCorrecta] = useState<boolean | null>(
     null
   );
@@ -43,14 +51,24 @@ export default function Question({ question }: IQuestionProps) {
       <Flex w={"full"} justify={"space-around"}>
         <Button
           w={"40%"}
-          onClick={() => handleRespuesta(true)}
+          onClick={() => {
+            handleRespuesta(buttonTrue);
+            if (buttonTrue === true) {
+              handleRespuestaCorrecta();
+            }
+          }}
           disabled={respuestaCorrecta !== null}
         >
           Verdadero
         </Button>
         <Button
           w={"40%"}
-          onClick={() => handleRespuesta(false)}
+          onClick={() => {
+            handleRespuesta(buttonFalse);
+            if (buttonFalse === true) {
+              handleRespuestaCorrecta();
+            }
+          }}
           disabled={respuestaCorrecta !== null}
         >
           Falso
