@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button, Flex, Text } from "@chakra-ui/react";
+import { FaCheck } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
 
 interface IQuestionProps {
   question: string;
@@ -18,13 +20,16 @@ export default function Question({
     null
   );
   const [respondido, setRespondido] = useState(false);
+  const [isQuestionTRue, setIsQuestionTRue] = useState(false);
 
   const handleRespuesta = (esVerdadero: boolean) => {
     if (respuestaCorrecta === null) {
       if (esVerdadero) {
         setRespuestaCorrecta(true);
+        setIsQuestionTRue(true);
       } else {
         setRespuestaCorrecta(false);
+        setIsQuestionTRue(false);
       }
     }
   };
@@ -78,6 +83,21 @@ export default function Question({
             >
               Falso
             </Button>
+          </>
+        )}
+        {respondido && (
+          <>
+            {isQuestionTRue ? (
+              <Flex align={"center"} color={"green"}>
+                <FaCheck />
+                Respuesta Correcta
+              </Flex>
+            ) : (
+              <Flex align={"center"} color={"red"}>
+                <IoClose style={{ fontSize: 23 }} />
+                Respuesta Incorrecta
+              </Flex>
+            )}
           </>
         )}
       </Flex>
