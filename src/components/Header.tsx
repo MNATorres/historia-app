@@ -114,7 +114,7 @@ export default function Header() {
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem>
-                  <ListStudents />
+                  <ListStudents color="#3182CE" textDecor="underline" title="Lista de Estudiantes" />
                 </MenuItem>
               </MenuList>
             </Menu>

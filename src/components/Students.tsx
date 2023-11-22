@@ -14,7 +14,7 @@ export default function Students() {
           </ListItem>
           <ListItem display={"flex"}>
             <Text mr={2}>Ir a</Text>
-            <ListStudents />
+            <ListStudents color="#3182CE" textDecor="underline" title="Lista de Estudiantes" />
           </ListItem>
         </List>
       </Flex>
