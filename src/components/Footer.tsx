@@ -10,6 +10,7 @@ import {
 import { FaHeart } from "react-icons/fa";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
+import ListStudents from "./ListStudents";
 
 export default function Footer() {
   const { scrollToSection } = useNavigation();
@@ -38,7 +39,9 @@ export default function Footer() {
           <Box as="a" onClick={() => scrollToSection("Chinampas")}>
             Culturas
           </Box>
-          <Box>Alumnos</Box>
+          <Box>
+            <ListStudents color="white" textDecor="none" title="Estudiantes" />
+          </Box>
         </Stack>
       </Container>
 

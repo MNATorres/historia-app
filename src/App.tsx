@@ -6,6 +6,7 @@ import { NavigationProvider } from "./hooks/useNavigation";
 import Footer from "./components/Footer";
 import Teachers from "./components/Teachers";
 import Students from "./components/Students";
+import Title from "./components/Title";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <NavigationProvider>
         <Header />
         <Hero />
+        <Title />
+
         <Main />
         <Students />
         <Teachers />

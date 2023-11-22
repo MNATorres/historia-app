@@ -28,20 +28,26 @@ const students = [
   "Vaca, Tatiana",
 ];
 
-export default function ListStudents() {
+interface IListStudentsProps {
+  title: string;
+  color: string;
+  textDecor:string;
+}
+
+export default function ListStudents({ title, color, textDecor }: IListStudentsProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, _] = useState<any>("left");
 
   return (
     <>
       <Text
-        color={"#3182CE"}
+        color={color}
         textStyle={"italic"}
-        textDecor={"underline"}
+        textDecor={textDecor}
         cursor={"pointer"}
         onClick={onOpen}
       >
-        Alumnos Participantes
+        {title}
       </Text>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
