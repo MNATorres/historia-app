@@ -5,7 +5,8 @@ import { useState } from "react";
 export default function PlayGame() {
   const [count, setCount] = useState(0);
 
-  const handleRespuestaCorrecta = () => {
+  const handleCorrectAnswer = () => {
+    if(count === 100) return
     setCount((prevCount) => prevCount + 20);
   };
 
@@ -36,31 +37,31 @@ export default function PlayGame() {
             buttonTrue={true}
             buttonFalse={false}
             question="Las principales culturas son las Mayas, Aztecas e Incas."
-            handleCorrectAnswer={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleCorrectAnswer}
           />
           <Question
             buttonTrue={true}
             buttonFalse={false}
             question="La literatura precolombina es el conjunto de textos literarios que fueron creados en el continente americano antes de la llegada de Cristóbal Colón"
-            handleCorrectAnswer={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleCorrectAnswer}
           />
           <Question
             buttonTrue={false}
             buttonFalse={true}
             question="Tikal, fué una ciudad Europea visitada por muchos originarios"
-            handleCorrectAnswer={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleCorrectAnswer}
           />
           <Question
             buttonTrue={false}
             buttonFalse={true}
             question="Milpas, eran ciudades de america donde los pueblos originarios podian comerciar"
-            handleCorrectAnswer={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleCorrectAnswer}
           />
           <Question
             buttonTrue={true}
             buttonFalse={false}
             question="Las terrazas de cultivo desempeñaban un papel crucial en la conservación del agua y la prevensión de la erosión"
-            handleCorrectAnswer={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleCorrectAnswer}
           />
         </Flex>
       </Flex>
