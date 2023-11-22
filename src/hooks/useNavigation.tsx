@@ -13,6 +13,7 @@ export const NavigationContext = createContext<INavigationContext>({
 });
 
 export const NavigationProvider = ({ children }: INavigationProp) => {
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
