@@ -17,8 +17,8 @@ function App() {
         <Hero />
         <Title />
         <Main />
-        <Students />
         <PlayGame />
+        <Students />
         <Teachers />
         <Footer />
       </NavigationProvider>
