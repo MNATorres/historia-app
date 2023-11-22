@@ -121,8 +121,7 @@ export default function Hero() {
                   {card.title}
                 </Heading>
                 <Text
-                  borderRadius={3}
-                  fontSize={{ base: "16px", lg: "70px" }}
+                  fontSize={{ base: "16px", lg: "22px" }}
                   color={'white'}
                   textShadow="-2px 1px 0px rgb(0 0 0)" 
                   
