@@ -36,31 +36,31 @@ export default function PlayGame() {
             buttonTrue={true}
             buttonFalse={false}
             question="Las principales culturas son las Mayas, Aztecas e Incas."
-            handleRespuestaCorrecta={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleRespuestaCorrecta}
           />
           <Question
             buttonTrue={true}
             buttonFalse={false}
             question="La literatura precolombina es el conjunto de textos literarios que fueron creados en el continente americano antes de la llegada de Cristóbal Colón"
-            handleRespuestaCorrecta={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleRespuestaCorrecta}
           />
           <Question
             buttonTrue={false}
             buttonFalse={true}
             question="Tikal, fué una ciudad Europea visitada por muchos originarios"
-            handleRespuestaCorrecta={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleRespuestaCorrecta}
           />
           <Question
             buttonTrue={false}
             buttonFalse={true}
             question="Milpas, eran ciudades de america donde los pueblos originarios podian comerciar"
-            handleRespuestaCorrecta={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleRespuestaCorrecta}
           />
           <Question
             buttonTrue={true}
             buttonFalse={false}
             question="Las terrazas de cultivo desempeñaban un papel crucial en la conservación del agua y la prevensión de la erosión"
-            handleRespuestaCorrecta={handleRespuestaCorrecta}
+            handleCorrectAnswer={handleRespuestaCorrecta}
           />
         </Flex>
       </Flex>

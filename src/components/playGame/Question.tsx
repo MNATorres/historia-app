@@ -7,28 +7,28 @@ interface IQuestionProps {
   question: string;
   buttonTrue: boolean;
   buttonFalse: boolean;
-  handleRespuestaCorrecta: () => void;
+  handleCorrectAnswer: () => void;
 }
 
 export default function Question({
   question,
   buttonTrue,
   buttonFalse,
-  handleRespuestaCorrecta,
+  handleCorrectAnswer,
 }: IQuestionProps) {
-  const [respuestaCorrecta, setRespuestaCorrecta] = useState<boolean | null>(
+  const [correctAnswer, setCorrectAnswer] = useState<boolean | null>(
     null
   );
-  const [respondido, setRespondido] = useState(false);
-  const [isQuestionTRue, setIsQuestionTRue] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  const [isQuestionTrue, setIsQuestionTRue] = useState(false);
 
-  const handleRespuesta = (esVerdadero: boolean) => {
-    if (respuestaCorrecta === null) {
-      if (esVerdadero) {
-        setRespuestaCorrecta(true);
+  const handleResponse = (isTrue: boolean) => {
+    if (correctAnswer === null) {
+      if (isTrue) {
+        setCorrectAnswer(true);
         setIsQuestionTRue(true);
       } else {
-        setRespuestaCorrecta(false);
+        setCorrectAnswer(false);
         setIsQuestionTRue(false);
       }
     }
@@ -46,48 +46,48 @@ export default function Question({
       direction={"column"}
       px={1}
       bg={
-        respuestaCorrecta === true
+        correctAnswer === true
           ? "green.200"
-          : respuestaCorrecta === false
+          : correctAnswer === false
           ? "red.200"
           : ""
       }
     >
       <Text>{question}</Text>
       <Flex w={"full"} justify={"space-around"}>
-        {!respondido && (
+        {!answered && (
           <>
             <Button
               w={"40%"}
               onClick={() => {
-                handleRespuesta(buttonTrue);
+                handleResponse(buttonTrue);
                 if (buttonTrue === true) {
-                  handleRespuestaCorrecta();
+                  handleCorrectAnswer();
                 }
-                setRespondido(true);
+                setAnswered(true);
               }}
-              disabled={respuestaCorrecta !== null}
+              disabled={correctAnswer !== null}
             >
               Verdadero
             </Button>
             <Button
               w={"40%"}
               onClick={() => {
-                handleRespuesta(buttonFalse);
+                handleResponse(buttonFalse);
                 if (buttonFalse === true) {
-                  handleRespuestaCorrecta();
+                  handleCorrectAnswer();
                 }
-                setRespondido(true);
+                setAnswered(true);
               }}
-              disabled={respuestaCorrecta !== null}
+              disabled={correctAnswer !== null}
             >
               Falso
             </Button>
           </>
         )}
-        {respondido && (
+        {answered && (
           <>
-            {isQuestionTRue ? (
+            {isQuestionTrue ? (
               <Flex align={"center"} color={"green"}>
                 <FaCheck />
                 Respuesta Correcta
