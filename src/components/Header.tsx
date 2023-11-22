@@ -112,6 +112,12 @@ export default function Header() {
                 >
                   Literatura Precolombina
                 </MenuItem>
+                <MenuItem
+                  onClick={() => scrollToSection("Jugar")}
+                  color={'green'}
+                >
+                  Juega un juego :D
+                </MenuItem>
                 <MenuDivider />
                 <MenuItem>
                   <ListStudents color="#3182CE" textDecor="underline" title="Lista de Estudiantes" />

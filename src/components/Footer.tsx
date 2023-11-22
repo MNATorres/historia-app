@@ -39,6 +39,9 @@ export default function Footer() {
           <Box as="a" onClick={() => scrollToSection("Chinampas")}>
             Culturas
           </Box>
+          <Box as="a" onClick={() => scrollToSection("Jugar")}>
+            Jugar
+          </Box>
           <Box>
             <ListStudents color="white" textDecor="none" title="Estudiantes" />
           </Box>

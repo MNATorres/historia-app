@@ -10,8 +10,8 @@ export default function PlayGame() {
   };
 
   return (
-    <Flex direction={"column"} p={3}>
-      <Text as="b" fontSize={"xx-large"}>
+    <Flex id="Jugar" direction={"column"}  p={3}>
+      <Text as="b" fontSize={"xx-large"} mt={"46px"}>
         Pon a prueba tus habilidades
       </Text>
       <Text color={"green"} fontSize={20}>
