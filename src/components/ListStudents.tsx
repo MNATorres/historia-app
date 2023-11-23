@@ -24,8 +24,8 @@ const students = [
   "GARCIA, Antonela",
   "LAZARO, Xiomara",
   "SAJAMA, Alejandra",
-  "Toconás, Esmeralda",
-  "Vaca, Tatiana",
+  "TOCONÁS, Esmeralda",
+  "VACA, Tatiana",
 ];
 
 interface IListStudentsProps {
