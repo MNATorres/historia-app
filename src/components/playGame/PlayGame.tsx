@@ -105,6 +105,9 @@ export default function PlayGame() {
           />
         </Flex>
       </Flex>
+      <Text color={"green"} fontSize={20}>
+        Puntos: {count}
+      </Text>
       {count === 100 && <Excelent />}
       <Button
         m={"0 auto"}
