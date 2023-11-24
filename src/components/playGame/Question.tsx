@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { FaCheck } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -8,6 +8,7 @@ interface IQuestionProps {
   buttonTrue: boolean;
   buttonFalse: boolean;
   handleCorrectAnswer: () => void;
+  resetGame: boolean;
 }
 
 export default function Question({
@@ -15,24 +16,29 @@ export default function Question({
   buttonTrue,
   buttonFalse,
   handleCorrectAnswer,
+  resetGame,
 }: IQuestionProps) {
-  const [correctAnswer, setCorrectAnswer] = useState<boolean | null>(
-    null
-  );
+  const [correctAnswer, setCorrectAnswer] = useState<boolean | null>(null);
   const [answered, setAnswered] = useState(false);
-  const [isQuestionTrue, setIsQuestionTRue] = useState(false);
+  const [isQuestionTrue, setIsQuestionTrue] = useState(false);
 
   const handleResponse = (isTrue: boolean) => {
     if (correctAnswer === null) {
       if (isTrue) {
         setCorrectAnswer(true);
-        setIsQuestionTRue(true);
+        setIsQuestionTrue(true);
       } else {
         setCorrectAnswer(false);
-        setIsQuestionTRue(false);
+        setIsQuestionTrue(false);
       }
     }
   };
+
+  useEffect(() => {
+    setCorrectAnswer(null);
+    setAnswered(false);
+    setIsQuestionTrue(false);
+  }, [resetGame]);
 
   return (
     <Flex
