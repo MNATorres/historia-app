@@ -13,7 +13,9 @@ export default function Share() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Text w={'full'} onClick={onOpen}>Compartir QR</Text>
+      <Text w={"full"} onClick={onOpen}>
+        Compartir
+      </Text>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>

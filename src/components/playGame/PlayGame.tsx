@@ -110,9 +110,9 @@ export default function PlayGame() {
         m={"0 auto"}
         w={{ base: "full", md: "30%", lg: "30%", xl: "30%" }}
         onClick={handleResetGame}
-        color={'green'}
+        color={"green"}
       >
-        <GrPowerReset style={{fontSize: 20, marginRight: 5}} />
+        <GrPowerReset style={{ fontSize: 20, marginRight: 5 }} />
         Volver a Jugar
       </Button>
     </Flex>
