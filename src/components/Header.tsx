@@ -18,6 +18,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
 import ListStudents from "./ListStudents";
+import Share from "./Share";
 
 interface Props {
   children: React.ReactNode;
@@ -112,15 +113,22 @@ export default function Header() {
                 >
                   Literatura Precolombina
                 </MenuItem>
+                <MenuItem color={'orange'}>
+                  <Share />
+                </MenuItem>
                 <MenuItem
                   onClick={() => scrollToSection("Jugar")}
-                  color={'green'}
+                  color={"green"}
                 >
                   Juega un juego :D
                 </MenuItem>
                 <MenuDivider />
                 <MenuItem>
-                  <ListStudents color="#3182CE" textDecor="underline" title="Lista de Estudiantes" />
+                  <ListStudents
+                    color="#3182CE"
+                    textDecor="underline"
+                    title="Lista de Estudiantes"
+                  />
                 </MenuItem>
               </MenuList>
             </Menu>

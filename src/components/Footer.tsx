@@ -11,6 +11,7 @@ import { FaHeart } from "react-icons/fa";
 import Logo from "./../assets/logo.png";
 import { useNavigation } from "../hooks/useNavigation";
 import ListStudents from "./ListStudents";
+import Share from "./Share";
 
 export default function Footer() {
   const { scrollToSection } = useNavigation();
@@ -36,8 +37,8 @@ export default function Footer() {
           <Box as="a" onClick={() => scrollToSection("inicio")}>
             Inicio
           </Box>
-          <Box as="a" onClick={() => scrollToSection("Chinampas")}>
-            Culturas
+          <Box>
+            <Share />
           </Box>
           <Box as="a" onClick={() => scrollToSection("Jugar")}>
             Jugar

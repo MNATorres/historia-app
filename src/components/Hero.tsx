@@ -34,17 +34,17 @@ export default function Hero() {
 
   const cards = [
     {
-      title: "MAYA",
+      title: "MAYAS",
       text: "Los Mayas ocuparon la península de Yucatán y sus alrededores, donde levantaron pirámides, monumentos y templos. Vivieron en estas regiones entre los siglos IV y IX a.C. ",
       image: Maya,
     },
     {
-      title: "AZTECA",
+      title: "AZTECAS",
       text: "Los Aztecas se ubicaron en el actual territorio mexicano, donde fundaron Tenochtitlan. Fueron una civilización que se desarrolló entre los siglos XIV y XVI.  Eran un pueblo guerrero y conquistador que logró formar un imperio en Mesoamérica.",
       image: Azteca,
     },
     {
-      title: "INCA",
+      title: "INCAS",
       text: "Los Incas fueron una civilización que habitó la región andina entre los siglos XII y XVI. Organizaron un imperio liderado por un monarca sagrado llamado Sapa Inca. Tenían una sociedad estructurada en torno a la vida comunal, a través de los ayllus.",
       image: Inca,
     },
@@ -122,9 +122,8 @@ export default function Hero() {
                 </Heading>
                 <Text
                   fontSize={{ base: "16px", lg: "22px" }}
-                  color={'white'}
-                  textShadow="-2px 1px 0px rgb(0 0 0)" 
-                  
+                  color={"white"}
+                  textShadow="-2px 1px 0px rgb(0 0 0)"
                 >
                   "{card.text}"
                 </Text>
